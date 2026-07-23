@@ -197,7 +197,7 @@
   }
 
   /* ---- game screen ---- */
-  #screen-game{ padding:0; justify-content:flex-start; }
+  [data-screen="game"]{ padding:0; justify-content:flex-start; }
   .hud{
     width:100%;
     display:flex;
@@ -296,7 +296,10 @@
   footer.credit{
     position:absolute; bottom:1vh; left:0; right:0;
     text-align:center; font-size:10px; color:#4d6688;
+    pointer-events:none;
+    z-index:1;
   }
+  [data-screen="game"].active ~ footer.credit{ opacity:0; }
 </style>
 
 <div id="stage">
